@@ -18,10 +18,14 @@ public class Magpie3
     public String getGreeting()
     {
 
-        findKeyword("She's my sister", "sister", 0);
-        findKeyword("Brother Tom is helpful", "brother", 0);
-        findKeyword("I can't catch wild cats.", "cat", 0);
+        // findKeyword("She's my sister", "sister", 0);
+        //System.out.println("I am done with First check");
+        //findKeyword("Brother Tom is helpful", "brother", 0);
+        //System.out.println("I am done with Second check");
+        //findKeyword("I can't catch wild cats.", "cat", 0);
+        //System.out.println("I am done with Third check");
         findKeyword("I know nothing about snow plows." ,"no", 0);
+        System.out.println("I am done with Fourth check");
 
         return "Hello, let's talk.";
     }
@@ -78,6 +82,7 @@ public class Magpie3
     int startPos)
     {
         String phrase = statement.trim();
+        System.out.println("phrase = " + phrase);
         // The only change to incorporate the startPos is in
         // the line below
         int psn = phrase.toLowerCase().indexOf(
@@ -85,8 +90,10 @@ public class Magpie3
 
         // Refinement--make sure the goal isn't part of a
         // word
+        System.out.println("1 . psn = " + psn);
         while (psn >= 0)
         {
+            //System.out.println("psn = " + psn);
             // Find the string of length 1 before and after
             // the word
             String before = " ", after = " ";
@@ -95,6 +102,8 @@ public class Magpie3
                 before = phrase.substring(psn - 1, psn)
                 .toLowerCase();
             }
+            System.out.println("before = " + before);
+            System.out.println(psn + goal.length() < phrase.length());
             if (psn + goal.length() < phrase.length())
             {
                 after = phrase.substring(
@@ -105,6 +114,8 @@ public class Magpie3
 
             // If before and after aren't letters, we've
             // found the word
+            System.out.println("psn = " + psn+", after = "+after+", before = "+before);
+
             if (((before.compareTo("a") < 0) || (before
                     .compareTo("z") > 0)) // before is not a
                 // letter
@@ -113,7 +124,7 @@ public class Magpie3
             {
                 return psn;
             }
-
+            
             // The last position didn't work, so let's find
             // the next, if there is one.
             psn = phrase.indexOf(goal.toLowerCase(),
