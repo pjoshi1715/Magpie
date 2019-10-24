@@ -18,12 +18,12 @@ public class Magpie3
     public String getGreeting()
     {
 
-        // findKeyword("She's my sister", "sister", 0);
-        //System.out.println("I am done with First check");
-        //findKeyword("Brother Tom is helpful", "brother", 0);
-        //System.out.println("I am done with Second check");
-        //findKeyword("I can't catch wild cats.", "cat", 0);
-        //System.out.println("I am done with Third check");
+        findKeyword("She's my sister", "sister", 0);
+        System.out.println("I am done with First check");
+        findKeyword("Brother Tom is helpful", "brother", 0);
+        System.out.println("I am done with Second check");
+        findKeyword("I can't catch wild cats.", "cat", 0);
+        System.out.println("I am done with Third check");
         findKeyword("I know nothing about snow plows." ,"no", 0);
         System.out.println("I am done with Fourth check");
 
