@@ -53,6 +53,11 @@ public class Magpie4
 		{
 			response = transformIWantToStatement(statement);
 		}
+		
+		else if (findKeyword(statement, "I want", 0) >= 0)
+		{
+			response = iWant(statement);
+		}
 
 		else
 		{
@@ -123,9 +128,33 @@ public class Magpie4
 	}
 	
 	
+	/**
+	 * Take a statement with "you <something> me" and transform it into 
+	 * "What makes you think that I <something> you?"
+	 * @param statement the user statement, assumed to contain "you" followed by "me"
+	 * @return the transformed statement
+	 */
+	private String iWant(String statement)
+	{
+		//  Remove the final period, if there is one
+		statement = statement.trim();
+		String lastChar = statement.substring(statement
+				.length() - 1);
+		if (lastChar.equals("."))
+		{
+			statement = statement.substring(0, statement
+					.length() - 1);
+		}
+		
+		int psnOfWant = findKeyword (statement, "want", 5);
 
+		
+		String restOfStatement = statement.substring(psnOfWant+5,statement.length()).trim();
+		return "Would you really be happy if you had" + restOfStatement + "?";
+	}	
 	
-	
+
+
 	/**
 	 * Search for one word in phrase.  The search is not case sensitive.
 	 * This method will check that the given goal is not a substring of a longer string
