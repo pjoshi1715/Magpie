@@ -149,8 +149,8 @@ public class Magpie4
 		int psnOfWant = findKeyword (statement, "want", 5);
 
 		
-		String restOfStatement = statement.substring(psnOfWant+5,statement.length()).trim();
-		return "Would you really be happy if you had" + restOfStatement + "?";
+		String restOfStatement = statement.substring(psnOfWant+7,statement.length()).trim();
+		return "Would you really be happy if you had " + restOfStatement + "?";
 	}	
 	
 
