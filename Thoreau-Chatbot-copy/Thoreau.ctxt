@@ -1,10 +1,14 @@
 #BlueJ class context
 comment0.target=Thoreau
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Thoreau\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Thoreau\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
-comment1.target=Thoreau()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Thoreau\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
-numComments=3
+comment1.target=void\ initialprint()
+comment2.params=
+comment2.target=void\ evaluatename()
+comment3.params=statement
+comment3.target=java.lang.String\ printadvice(java.lang.String)
+comment4.params=statement
+comment4.target=java.lang.String\ wordtostatement(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ Continue()
+numComments=6

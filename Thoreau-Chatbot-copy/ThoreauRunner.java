@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class ThoreauRunner here.
  *
@@ -18,15 +17,15 @@ public class ThoreauRunner
     {
         Thoreau thoreau = new Thoreau();
 		
-		System.out.println (thoreau.initialprint());
-		Scanner in = new Scanner (System.in);
-		String statement = in.nextLine();
-		
-		while (!statement.equals("Bye"))
-		{
-			System.out.println (thoreau.getResponse(statement));
-			statement = in.nextLine();
-		}
+	thoreau.initialprint();
+	Scanner in = new Scanner (System.in);
+	String statement = in.nextLine();
+	
+	while (!statement.equals("Bye"))
+	{
+	    System.out.println (thoreau.printadvice(statement));
+	    statement = in.nextLine();
+	}
     }
 
     /**
@@ -35,9 +34,8 @@ public class ThoreauRunner
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    
 }
+
+
+        
